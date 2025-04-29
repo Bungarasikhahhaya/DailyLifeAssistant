@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1000px;
+    height: 600px;
+    background-color: white;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+  
+  .left-panel {
+    flex: 1;
+    background-color: #8b3f5d;
+    color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .left-panel h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .left-panel .bold {
+    font-weight: bold;
+  }
+  
+  .left-panel p {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+  
+  .left-panel .illustration {
+    margin-top: 40px;
+    max-width: 100%;
+  }
+  
+  .right-panel {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .right-panel h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1em;
+    background-color: #fff0f4;
+    border-color: #e3b1c2;
+  }
+  
+  .signup-btn {
+    background-color: #b25475;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9em;
+  }
+  
+  .login-link a {
+    color: #3b3be0;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .or-divider {
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+  }
+  
+  .social-login {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .social-login button {
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .google-btn {
+    background-color: white;
+  }
+  
+  .apple-btn {
+    background-color: white;
+  }
+  
