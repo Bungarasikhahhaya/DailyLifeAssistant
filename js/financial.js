@@ -82,8 +82,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const transactions = JSON.parse(localStorage.getItem('financialTransactions')) || [];
         
         // Clear table
-        transactionsTable.innerHTML = '';
-        
+        const tbody = transactionsTable.querySelector('tbody');
+        tbody.innerHTML = '';
+
         // If no transactions, add sample data
         if (transactions.length === 0) {
             const sampleData = [
@@ -112,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             sampleData.forEach(transaction => {
                 const row = createTransactionRow(transaction);
-                transactionsTable.appendChild(row);
+                tbody.appendChild(row);
             });
             
             return;
@@ -121,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add transactions to table
         transactions.forEach(transaction => {
             const row = createTransactionRow(transaction);
-            transactionsTable.appendChild(row);
+            tbody.appendChild(row);
         });
     }
     
@@ -183,6 +184,38 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('click', function() {
             menuItems.forEach(i => i.classList.remove('active'));
             this.classList.add('active');
+        
         });
+
+    // Tambahkan ikon dropdown dan kalender
+    // Tambahan ini diletakkan di dalam DOMContentLoaded, sebelum penutup });
+    const typeSelect = document.getElementById('transaction-type');
+    const categorySelect = document.getElementById('category');
+    const dateField = document.getElementById('date');
+
+    // Wrap select elements with a styled div dan tambahkan ikon dropdown
+    [typeSelect, categorySelect].forEach(select => {
+        const wrapper = document.createElement('div');
+        wrapper.classList.add('select-wrapper');
+        select.parentNode.insertBefore(wrapper, select);
+        wrapper.appendChild(select);
+
+        const icon = document.createElement('span');
+        icon.classList.add('dropdown-icon');
+        icon.innerHTML = '&#9662;'; // Unicode panah bawah
+        wrapper.appendChild(icon);
+    });
+
+    // Tambahkan ikon kalender ke input tanggal
+    const dateWrapper = document.createElement('div');
+    dateWrapper.classList.add('date-wrapper');
+    dateField.parentNode.insertBefore(dateWrapper, dateField);
+    dateWrapper.appendChild(dateField);
+
+    const calendarIcon = document.createElement('span');
+    calendarIcon.classList.add('calendar-icon');
+    calendarIcon.innerHTML = '&#128197;'; // Unicode ikon kalender
+    dateWrapper.appendChild(calendarIcon);
+
     });
 });
