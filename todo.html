@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Life Assistant - To-Do List</title>
+    <link rel="stylesheet" href="css/todo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-container">
+                <h1>Daily Life Assistant</h1>
+            </div>
+            <nav class="sidebar-menu">
+                <ul>
+                    <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li class="active"><a href="todo.html"><i class="fas fa-list-check"></i> To-Do List</a></li>
+                    <li><a href="mood.html"><i class="fas fa-face-smile"></i> Mood Tracker</a></li>
+                    <li><a href="financial.html"><i class="fas fa-wallet"></i> Financial Tracker</a></li>
+                    <li><a href="daily.html"><i class="fas fa-quote-left"></i> Daily Quote</a></li>
+                    <li><a href="#"><i class="fas fa-heart"></i> Self-Care</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h2>To-Do List</h2>
+            </header>
+
+            <!-- Add Task Form -->
+            <div class="add-task-container">
+                <input type="text" id="new-task" placeholder="Add a new task...">
+                <button id="add-task-btn" class="add-btn">Add</button>
+            </div>
+
+            <!-- Tasks List -->
+            <div class="tasks-container">
+                <div class="task-item completed">
+                    <div class="task-left">
+                        <div class="checkbox checked">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span class="task-text">Kerja kelompok</span>
+                    </div>
+                    <div class="task-right">
+                        <span class="task-date">Today</span>
+                        <button class="task-edit">Edit</button>
+                        <button class="task-delete">Delete</button>
+                    </div>
+                </div>
+
+                <div class="task-item completed">
+                    <div class="task-left">
+                        <div class="checkbox checked">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span class="task-text">Olahraga</span>
+                    </div>
+                    <div class="task-right">
+                        <span class="task-date">Today</span>
+                        <button class="task-edit">Edit</button>
+                        <button class="task-delete">Delete</button>
+                    </div>
+                </div>
+
+                <div class="task-item">
+                    <div class="task-left">
+                        <div class="checkbox"></div>
+                        <span class="task-text">Menyelesaikan project</span>
+                    </div>
+                    <div class="task-right">
+                        <span class="task-date">Tomorrow</span>
+                        <button class="task-edit">Edit</button>
+                        <button class="task-delete">Delete</button>
+                    </div>
+                </div>
+
+                <div class="task-item">
+                    <div class="task-left">
+                        <div class="checkbox"></div>
+                        <span class="task-text">Bersih bersih rumah</span>
+                    </div>
+                    <div class="task-right">
+                        <span class="task-date">Tomorrow</span>
+                        <button class="task-edit">Edit</button>
+                        <button class="task-delete">Delete</button>
+                    </div>
+                </div>
+
+                <div class="task-item">
+                    <div class="task-left">
+                        <div class="checkbox"></div>
+                        <span class="task-text">Healing</span>
+                    </div>
+                    <div class="task-right">
+                        <span class="task-date">20 April</span>
+                        <button class="task-edit">Edit</button>
+                        <button class="task-delete">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/todo.js"></script>
+</body>
+</html>

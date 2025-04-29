@@ -1,0 +1,281 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #333;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #b25475;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.logo-container {
+    background-color: #e8b7c9;
+    color: #b25475;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo-container h1 {
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.sidebar-menu {
+    flex-grow: 1;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    padding: 15px 20px;
+    transition: background-color 0.3s;
+}
+
+.sidebar-menu li.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-menu li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-menu a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-menu i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.logout {
+    margin-top: auto;
+    padding: 20px;
+}
+
+.logout a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logout i {
+    margin-right: 10px;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    background-color: white;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+header h2 {
+    color: #b25475;
+    font-size: 24px;
+}
+
+/* Add Task Form */
+.add-task-container {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.add-task-container input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+}
+
+.add-task-container input:focus {
+    border-color: #b25475;
+}
+
+.add-btn {
+    background-color: #b25475;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 0 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+    background-color: #a04b69;
+}
+
+/* Tasks List */
+.tasks-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s;
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.task-item:hover {
+    background-color: #f9f9f9;
+}
+
+.task-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.checkbox {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #b25475;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.checkbox.checked {
+    background-color: #b25475;
+    color: white;
+}
+
+.task-text {
+    font-size: 16px;
+}
+
+.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-date {
+    color: #888;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.task-edit, .task-delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.task-edit {
+    color: #b25475;
+}
+
+.task-edit:hover {
+    background-color: #f9e7ed;
+}
+
+.task-delete {
+    color: #e74c3c;
+}
+
+.task-delete:hover {
+    background-color: #fde8e7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+    
+    .logo-container {
+        text-align: left;
+    }
+    
+    .sidebar-menu ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .sidebar-menu li {
+        flex: 1;
+        min-width: 120px;
+    }
+    
+    .logout {
+        text-align: center;
+    }
+    
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .task-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+}

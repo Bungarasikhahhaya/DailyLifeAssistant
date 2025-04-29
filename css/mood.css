@@ -1,0 +1,276 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #333;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #b25475;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.logo-container {
+    background-color: #e8b7c9;
+    color: #b25475;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo-container h1 {
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.sidebar-menu {
+    flex-grow: 1;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    padding: 15px 20px;
+    transition: background-color 0.3s;
+}
+
+.sidebar-menu li.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-menu li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-menu a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-menu i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.logout {
+    margin-top: auto;
+    padding: 20px;
+}
+
+.logout a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logout i {
+    margin-right: 10px;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    background-color: white;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+header h2 {
+    color: #b25475;
+    font-size: 24px;
+}
+
+h3 {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+/* Mood Selection */
+.mood-selection {
+    margin-bottom: 25px;
+}
+
+.mood-icons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.mood-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin: 0 5px;
+}
+
+.mood-icon:hover {
+    transform: scale(1.1);
+}
+
+.mood-icon.selected {
+    transform: scale(1.1);
+}
+
+.emoji {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.mood-icon span {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Diary Entry */
+.diary-container {
+    margin-bottom: 25px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    resize: none;
+    font-size: 15px;
+    color: #333;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #b25475;
+}
+
+.save-btn {
+    background-color: #b25475;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+
+.save-btn:hover {
+    background-color: #a04b69;
+}
+
+/* Mood History */
+.mood-history {
+    margin-top: 30px;
+}
+
+.history-entries {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.history-entry {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.entry-header {
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+.entry-date {
+    color: #b25475;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.entry-emoji {
+    font-size: 22px;
+}
+
+.entry-content {
+    padding: 15px;
+    color: #666;
+    font-size: 14px;
+    height: 80px;
+    overflow-y: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .history-entries {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+    
+    .logo-container {
+        text-align: left;
+    }
+    
+    .sidebar-menu ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .sidebar-menu li {
+        flex: 1;
+        min-width: 120px;
+    }
+    
+    .logout {
+        text-align: center;
+    }
+    
+    .mood-icons {
+        justify-content: flex-start;
+        gap: 15px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+}

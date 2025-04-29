@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Life Assistant - Daily Quotes</title>
+    <link rel="stylesheet" href="css/daily.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-container">
+                <h1>Daily Life Assistant</h1>
+            </div>
+            <nav class="sidebar-menu">
+                <ul>
+                    <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="todo.html"><i class="fas fa-list-check"></i> To-Do List</a></li>
+                    <li><a href="mood-tracker.html"><i class="fas fa-face-smile"></i> Mood Tracker</a></li>
+                    <li><a href="financial.html"><i class="fas fa-wallet"></i> Financial Tracker</a></li>
+                    <li class="active"><a href="daily-quotes.html"><i class="fas fa-quote-left"></i> Daily Quote</a></li>
+                    <li><a href="#"><i class="fas fa-heart"></i> Self-Care</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h2>Daily Qoutes</h2>
+            </header>
+
+            <!-- Today's Quote -->
+            <div class="quote-of-the-day">
+                <div class="quote-box">
+                    <p class="quote-text">"The only way to do great work is to love what you do."</p>
+                    <p class="quote-author">
+                        <span class="bullet">•</span> Steve Jobs
+                    </p>
+                </div>
+            </div>
+
+            <!-- Previous Quotes -->
+            <section class="previous-quotes">
+                <h3>Previous Qoutes</h3>
+                <div class="quotes-grid">
+                    <div class="quote-card">
+                        <p class="quote-text">"The future belongs to those who believe in the beauty of their dreams."</p>
+                        <p class="quote-author">
+                            <span class="bullet">•</span> Steve Jobs
+                        </p>
+                        <p class="quote-date">April 16, 2025</p>
+                    </div>
+                    <div class="quote-card">
+                        <p class="quote-text">"Happiness is not something ready-made. It comes from your own actions."</p>
+                        <p class="quote-author">
+                            <span class="bullet">•</span> Dalai Lama
+                        </p>
+                        <p class="quote-date">April 15, 2025</p>
+                    </div>
+                    <div class="quote-card">
+                        <p class="quote-text">"The best time to plant a tree was 20 years ago. The second best time is now."</p>
+                        <p class="quote-author">
+                            <span class="bullet">•</span> Chinese Proverb
+                        </p>
+                        <p class="quote-date">April 14, 2025</p>
+                    </div>
+                    <div class="quote-card">
+                        <p class="quote-text">"It does not matter how slowly you go as long as you do not stop."</p>
+                        <p class="quote-author">
+                            <span class="bullet">•</span> Confucius
+                        </p>
+                        <p class="quote-date">April 13, 2025</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Save Quote Buttons -->
+            <section class="save-quotes">
+                <h3>Save Your Favorite Quotes</h3>
+                <div class="action-buttons">
+                    <button id="save-quote" class="btn btn-light">Save today's quote</button>
+                    <button id="share-quote" class="btn btn-primary">Share</button>
+                </div>
+            </section>
+
+            <!-- Add Your Own Quote -->
+            <section class="add-quote">
+                <h3>Add Your Own Quote</h3>
+                <form id="quote-form">
+                    <div class="form-group">
+                        <label for="quote-text">Quote Text</label>
+                        <textarea id="quote-text" placeholder="Enter your favorite quote..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="quote-author">Author</label>
+                        <input type="text" id="quote-author" placeholder="Enter the author's name...">
+                    </div>
+                    <button type="submit" class="btn btn-light">Add Quote</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/daily.js"></script>
+</body>
+</html>

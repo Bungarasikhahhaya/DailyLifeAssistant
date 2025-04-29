@@ -1,0 +1,284 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #333;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #b25475;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.logo-container {
+    background-color: #e8b7c9;
+    color: #b25475;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo-container h1 {
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.sidebar-menu {
+    flex-grow: 1;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    padding: 15px 20px;
+    transition: background-color 0.3s;
+}
+
+.sidebar-menu li.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-menu li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-menu a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-menu i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.logout {
+    margin-top: auto;
+    padding: 20px;
+}
+
+.logout a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logout i {
+    margin-right: 10px;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    background-color: white;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+header h2 {
+    color: #b25475;
+    font-size: 24px;
+}
+
+h3 {
+    color: #b25475;
+    margin: 25px 0 15px;
+    font-size: 20px;
+}
+
+/* Quote of the Day */
+.quote-of-the-day {
+    margin-bottom: 25px;
+}
+
+.quote-box {
+    background-color: #f8edf1;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.quote-text {
+    font-size: 18px;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.quote-author {
+    color: #b25475;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bullet {
+    margin-right: 5px;
+}
+
+/* Previous Quotes Grid */
+.quotes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.quote-card {
+    background-color: #f8edf1;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.quote-card .quote-text {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.quote-card .quote-author {
+    justify-content: flex-start;
+    font-size: 14px;
+}
+
+.quote-date {
+    color: #888;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* Save Quote Buttons */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: #b25475;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #a04b69;
+}
+
+.btn-light {
+    background-color: #f8edf1;
+    color: #b25475;
+    border: 1px solid #e8b7c9;
+}
+
+.btn-light:hover {
+    background-color: #e8b7c9;
+}
+
+/* Add Quote Form */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #b25475;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .quotes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+    
+    .logo-container {
+        text-align: left;
+    }
+    
+    .sidebar-menu ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .sidebar-menu li {
+        flex: 1;
+        min-width: 120px;
+    }
+    
+    .logout {
+        text-align: center;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}

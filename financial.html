@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Life Assistant - Financial Tracker</title>
+    <link rel="stylesheet" href="css/financial.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-container">
+                <h1>Daily Life Assistant</h1>
+            </div>
+            <nav class="sidebar-menu">
+                <ul>
+                    <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="todo.html"><i class="fas fa-list-check"></i> To-Do List</a></li>
+                    <li><a href="mood.html"><i class="fas fa-face-smile"></i> Mood Tracker</a></li>
+                    <li class="active"><a href="financial-tracker.html"><i class="fas fa-wallet"></i> Financial Tracker</a></li>
+                    <li><a href="daily.html"><i class="fas fa-quote-left"></i> Daily Quote</a></li>
+                    <li><a href="self.html"><i class="fas fa-heart"></i> Self-Care</a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h2>Financial Tracker</h2>
+            </header>
+
+            <!-- Transaction Form -->
+            <section class="transaction-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="transaction-type">Jenis Transaksi</label>
+                        <input type="text" id="transaction-type" placeholder="Income" role="input">
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Amount</label>
+                        <input type="text" id="amount" placeholder="Enter amount" role="input">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <input type="text" id="category" placeholder="Salary" role="input">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="text" id="date" placeholder="mm/dd/yyy" role="input">
+                    </div>
+                </div>
+                <div class="form-group full-width">
+                    <label for="description">Description</label>
+                    <input type="text" id="description" placeholder="Enter description" role="input">
+                </div>
+                <div class="form-actions">
+                    <button id="add-transaction" class="btn">Add Transaction</button>
+                </div>
+            </section>
+
+            <!-- Transaction History -->
+            <section class="transaction-history">
+                <h3>Transaction History</h3>
+                <div class="transaction-table">
+                    <table id="transactions-table">
+                        <tbody>
+                            <!-- Transactions will be added dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/financial.js"></script>
+</body>
+</html>
