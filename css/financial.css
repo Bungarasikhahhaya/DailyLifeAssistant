@@ -19,7 +19,7 @@ body {
 
 /* Sidebar Styles */
 .sidebar {
-    width: 180px;
+    width: 250px;
     background-color: #b25475;
     color: white;
     display: flex;
@@ -48,7 +48,7 @@ body {
 }
 
 .sidebar-menu li {
-    padding: 15px 10px;
+    padding: 15px 20px;
     transition: background-color 0.3s;
 }
 
@@ -266,3 +266,80 @@ td {
         overflow-x: auto;
     }
 }
+
+    .select-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+    
+    .select-wrapper select {
+        width: 100%;
+        padding-right: 2.5rem; /* space for icon */
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+    
+    .dropdown-icon {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        pointer-events: none;
+        color: #995a6a;
+        font-size: 1rem;
+    }
+    
+    /* Date input wrapper */
+    .date-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+    
+    .date-wrapper input[type="date"] {
+        width: 100%;
+        padding-right: 2.5rem; /* space for icon */
+    }
+    
+    .calendar-icon {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        pointer-events: none;
+        color: #995a6a;
+        font-size: 1rem;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+        font-family: 'Arial', sans-serif;
+    }
+    
+    thead {
+        background-color: #f8f8f8;
+        color: #80475c;
+        text-align: left;
+    }
+    
+    th, td {
+        padding: 12px 16px;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    td.amount-income {
+        color: green;
+        font-weight: bold;
+    }
+    
+    td.amount-expense {
+        color: red;
+        font-weight: bold;
+    }
+
+    
+    
