@@ -1,36 +1,36 @@
 /* styles.css */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f8f9fa;
-    color: #444;
+    background-color: #1e1e1e;
+    color: #333;
+    height: 100vh;
 }
 
 .container {
-    width: 100%;
-    min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    height: 100%;
 }
 
 header {
-    background-color: #f5bfc2;
-    color: #953945;
+    background-color: #e8b7c9;
+    color: #b25475;
     padding: 20px;
     text-align: center;
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 500;
+    line-height: 1.2;
 }
 
 .main-content {
@@ -40,8 +40,8 @@ h1 {
 
 /* Sidebar Styles */
 .sidebar {
-    width: 220px;
-    background-color: #953945;
+    width: 250px;
+    background-color: #b25475;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -55,10 +55,15 @@ h1 {
 .sidebar nav ul li {
     padding: 15px 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
 }
 
 .sidebar nav ul li.active {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar nav ul li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .sidebar nav ul li a {
@@ -77,6 +82,7 @@ h1 {
 .logout {
     padding: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: auto;
 }
 
 .logout a {
@@ -95,24 +101,27 @@ h1 {
     flex: 1;
     padding: 30px;
     overflow-y: auto;
+    background-color: white;
 }
 
 h2 {
-    color: #953945;
+    color: #b25475;
     margin-bottom: 15px;
     font-weight: 500;
+    font-size: 24px;
 }
 
 hr {
     border: none;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid #eee;
     margin-bottom: 30px;
 }
 
 h3 {
-    color: #953945;
+    color: #666;
     margin-bottom: 20px;
     font-weight: 400;
+    font-size: 18px;
 }
 
 /* Activity Cards */
@@ -125,12 +134,17 @@ h3 {
 
 .activity-card {
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 15px;
     display: flex;
     align-items: center;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #eee;
     position: relative;
+    transition: transform 0.2s;
+}
+
+.activity-card:hover {
+    transform: scale(1.02);
 }
 
 .activity-icon {
@@ -145,12 +159,12 @@ h3 {
 }
 
 .water { background-color: #4fc3f7; }
-.exercise { background-color: #7e57c2; }
+.exercise { background-color: #b25475; }
 .meditation { background-color: #66bb6a; }
 .sleep { background-color: #ffd54f; }
 .meals { background-color: #66bb6a; }
-.reading { background-color: #7e57c2; }
-.skincare { background-color: #f06292; }
+.reading { background-color: #b25475; }
+.skincare { background-color: #e8b7c9; }
 .digital-detox { background-color: #ff7043; }
 
 .activity-details {
@@ -169,7 +183,7 @@ h3 {
 
 .progress-text {
     font-size: 12px;
-    color: #953945;
+    color: #b25475;
     font-weight: 500;
 }
 
@@ -183,11 +197,16 @@ h3 {
     justify-content: center;
     color: white;
     cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.checkbox:hover {
+    border-color: #b25475;
 }
 
 .checkbox.checked {
-    background-color: #953945;
-    border-color: #953945;
+    background-color: #b25475;
+    border-color: #b25475;
 }
 
 /* Add Activity Section */
@@ -199,20 +218,29 @@ h3 {
 .add-activity input {
     flex: 1;
     padding: 12px 15px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #ddd;
     border-radius: 5px 0 0 5px;
     outline: none;
     font-size: 14px;
 }
 
+.add-activity input:focus {
+    border-color: #b25475;
+}
+
 .add-activity button {
-    background-color: #953945;
+    background-color: #b25475;
     color: white;
     border: none;
     padding: 12px 25px;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
     font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.add-activity button:hover {
+    background-color: #a04b69;
 }
 
 /* Weekly Progress Section */
@@ -226,11 +254,18 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.day:hover {
+    transform: scale(1.1);
 }
 
 .day-name {
     font-weight: 500;
     margin-bottom: 5px;
+    color: #b25475;
 }
 
 .day-score {
@@ -240,7 +275,7 @@ h3 {
 
 .progress-bar-container {
     height: 10px;
-    background-color: #f5bfc2;
+    background-color: #e8b7c9;
     border-radius: 5px;
     overflow: hidden;
     margin-bottom: 10px;
@@ -248,17 +283,62 @@ h3 {
 
 .progress-bar {
     height: 100%;
-    background-color: #953945;
+    background-color: #b25475;
     width: 60%;
 }
 
 .overall-progress {
     text-align: center;
     font-weight: 500;
-    color: #953945;
+    color: #b25475;
+}
+
+/* Mood Section (New) */
+.mood-selection {
+    margin-bottom: 25px;
+}
+
+.mood-icons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 600px;
+}
+
+.mood-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin: 0 5px;
+}
+
+.mood-icon:hover {
+    transform: scale(1.1);
+}
+
+.mood-icon.selected {
+    transform: scale(1.1);
+}
+
+.emoji {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.mood-icon span {
+    font-size: 14px;
+    color: #666;
 }
 
 /* Responsive Design */
+@media (max-width: 900px) {
+    .activities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .main-content {
         flex-direction: column;
@@ -277,6 +357,8 @@ h3 {
     .sidebar nav ul li {
         border-bottom: none;
         border-right: 1px solid rgba(255, 255, 255, 0.1);
+        flex: 1;
+        min-width: 120px;
     }
     
     .logout {
@@ -289,5 +371,13 @@ h3 {
     
     .days {
         overflow-x: auto;
+        padding-bottom: 10px;
+    }
+    
+    .mood-icons {
+        justify-content: flex-start;
+        gap: 15px;
+        overflow-x: auto;
+        padding-bottom: 10px;
     }
 }
