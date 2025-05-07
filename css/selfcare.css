@@ -1,7 +1,4 @@
-/* styles.css */
-
-@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;700&display=swap');
-
+/* Base styles */
 * {
     margin: 0;
     padding: 0;
@@ -20,108 +17,101 @@ body {
     height: 100%;
 }
 
-header {
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #b25475;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.logo-container {
     background-color: #e8b7c9;
     color: #b25475;
     padding: 20px;
     text-align: center;
 }
 
-h1 {
+.logo-container h1 {
     font-size: 24px;
-    font-weight: 500;
     line-height: 1.2;
 }
 
-.main-content {
-    display: flex;
-    flex: 1;
+.sidebar-menu {
+    flex-grow: 1;
 }
 
-/* Sidebar Styles */
-.sidebar {
-    width: 250px;
-    background-color: #b25475;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.sidebar nav ul {
+.sidebar-menu ul {
     list-style: none;
 }
 
-.sidebar nav ul li {
+.sidebar-menu li {
     padding: 15px 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     transition: background-color 0.3s;
 }
 
-.sidebar nav ul li.active {
+.sidebar-menu li.active {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.sidebar nav ul li:hover {
+.sidebar-menu li:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.sidebar nav ul li a {
-    color: #fff;
+.sidebar-menu a {
+    color: white;
     text-decoration: none;
     display: flex;
     align-items: center;
 }
 
-.sidebar nav ul li a i {
+.sidebar-menu i {
     margin-right: 10px;
     width: 20px;
     text-align: center;
 }
 
 .logout {
-    padding: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin-top: auto;
+    padding: 20px;
 }
 
 .logout a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     display: flex;
     align-items: center;
 }
 
-.logout a i {
+.logout i {
     margin-right: 10px;
 }
 
-/* Main Content Styles */
-.content {
-    flex: 1;
-    padding: 30px;
-    overflow-y: auto;
+/* Main Content */
+.main-content {
+    flex-grow: 1;
     background-color: white;
+    padding: 20px;
+    overflow-y: auto;
 }
 
-h2 {
+header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+header h2 {
     color: #b25475;
-    margin-bottom: 15px;
-    font-weight: 500;
     font-size: 24px;
 }
 
-hr {
-    border: none;
-    border-top: 1px solid #eee;
-    margin-bottom: 30px;
-}
-
 h3 {
-    color: #666;
-    margin-bottom: 20px;
-    font-weight: 400;
-    font-size: 18px;
+    color: #b25475;
+    margin: 25px 0 15px;
+    font-size: 20px;
 }
 
 /* Activity Cards */
